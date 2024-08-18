@@ -34,3 +34,18 @@ setInterval(nextSlide, 3000); // Change slide every 3 seconds
 document.addEventListener('DOMContentLoaded', () => {
     showSlide(currentIndex);
 });
+
+
+$(document).ready(function() {
+    $('.hamburger').on('click', function() {
+        $('nav ul').toggleClass('active');
+    });
+
+    $("#accordion").accordion({
+        heightStyle: "content",  // Accordion panels adjust their height based on the content
+        active: false,           // No panel is active (open) by default
+        collapsible: true,       // Allows all panels to be collapsed
+        autoHeight: false        // Deprecated in newer versions; "heightStyle" is preferred
+    });
+
+});
